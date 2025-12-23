@@ -6,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import Dashboard from "./pages/Dashboard";
+import Decisions from "./pages/Decisions";
+import Habits from "./pages/Habits";
+import Skills from "./pages/Skills";
+import Reviews from "./pages/Reviews";
+import Settings from "./pages/Settings";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
@@ -22,11 +27,11 @@ const App = () => (
             <Route path="/auth" element={<Auth />} />
             <Route element={<DashboardLayout />}>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/decisions" element={<Dashboard />} />
-              <Route path="/habits" element={<Dashboard />} />
-              <Route path="/skills" element={<Dashboard />} />
-              <Route path="/reviews" element={<Dashboard />} />
-              <Route path="/settings" element={<Dashboard />} />
+              <Route path="/decisions" element={<Decisions />} />
+              <Route path="/habits" element={<Habits />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/reviews" element={<Reviews />} />
+              <Route path="/settings" element={<Settings />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
